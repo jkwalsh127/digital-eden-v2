@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './Index.css';
-import './IndexMediaQueries.css';
+import './index.css';
+import './indexMediaQueries.css';
 import App from './App';
 import { ThemeProvider, createTheme } from '@mui/material';
 import Amplify from 'aws-amplify';
