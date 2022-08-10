@@ -1,0 +1,79 @@
+# This "input" configures a global authorization rule to enable public access to
+# all models in this schema. Learn more about authorization rules here: https://docs.amplify.aws/cli/graphql/authorization-rules
+input AMPLIFY { globalAuthRule: AuthRule = { allow: public } } # FOR TESTING ONLY!
+
+type BtcTrade @model {
+  id: ID!
+  position: String!
+  dateEntry: String
+  dateClose: String
+  priceEntry: String
+  priceClose: String
+  profitPrice: String
+  profitPercentage: String
+}
+type BtcSummary @model {
+  id: ID!
+  netProfit: String
+  grossProfit: String
+  grossLoss: String
+  netLong: String
+  grossLong: String
+  lossLong: String
+  netShort: String
+  grossShort: String
+  lossShort: String
+  buyAndHold: String
+  totalTrades: String
+  winningTrades: String
+  losingTrades: String
+  avgTrade: String
+  avgWin: String
+  avgLoss: String
+  winLossRatio: String
+  largestWin: String
+  largestWinDate: String
+  largestLoss: String
+  largestLossDate: String
+  avgTime: String
+  avgTimeWin: String
+  avgTimeLoss: String
+}
+
+type EthTrade @model {
+  id: ID!
+  position: String!
+  dateEntry: String
+  dateClose: String
+  priceEntry: String
+  priceClose: String
+  profitPrice: String
+  profitPercentage: String
+}
+type EthSummary @model {
+  id: ID!
+  netProfit: String
+  grossProfit: String
+  grossLoss: String
+  netLong: String
+  grossLong: String
+  lossLong: String
+  netShort: String
+  grossShort: String
+  lossShort: String
+  buyAndHold: String
+  totalTrades: String
+  winningTrades: String
+  losingTrades: String
+  avgTrade: String
+  avgWin: String
+  avgLoss: String
+  winLossRatio: String
+  largestWin: String
+  largestWinDate: String
+  largestLoss: String
+  largestLossDate: String
+  avgTime: String
+  avgTimeWin: String
+  avgTimeLoss: String
+}
