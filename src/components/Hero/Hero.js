@@ -8,7 +8,7 @@ export default function heroSmallScreen() {
   
       <Box className='hero-container'>
         <img className="image-show" src={photo} alt="hero" />
-        <Container >
+        <Container className='legend-container'>
           <Legend />
         </Container>
       </Box>
