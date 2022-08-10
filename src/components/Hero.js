@@ -1,28 +1,14 @@
-import video from './videos/btc-bot.mp4';
-import photo from './images/btc-bot.png';
+import photo from '../images/btc-bot.png';
 
-function Hero({setPoster, poster}) {
-    
+function heroSmallScreen() {
 
-  return (
-    <div className='hero-container'>
-      <div className={`${poster ? "hero-wrapper-hide" : "hero-wrapper-show"}`}>
-        <div className='subheader-wrapper'>
-          <h3 className='welcome-subheader font-subheader'>
-            Whether longing or shorting, this strategy <br/>
-            is always in position to catch the next big move.
-          </h3>
-        </div>
+    return (
+  
+      <div className='hero-container'>
+        <img className="image-show" src={photo} alt="hero" />     
       </div>
-      <video className={`${poster ? "video-hide" : "video-show"}`} autoPlay muted onEnded={() => setPoster(true)}>
-          <source
-              src={video}
-              type="video/mp4"
-          />
-      </video>  
-      <img className={`${poster ? "image-show" : "image-hide"}`} src={photo} alt="hero" />     
-    </div>
-  );
-};
-
-export default Hero;
+  
+      );
+  };
+  
+  export default heroSmallScreen;

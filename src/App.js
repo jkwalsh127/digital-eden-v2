@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import './styles/AppMediaQuery.css';
+import "@aws-amplify/ui-react/styles.css";
 import Header from './components/Header';
 import Algorithms from './pages/Algorithms';
 import Miners from './pages/Miners';
+import { Authenticator } from "@aws-amplify/ui-react";
 
 function App() {
 
@@ -13,19 +14,19 @@ function App() {
     <Authenticator>
       {({ signOut }) => (
         <Router>
-          <Header poster={poster}/>
+          <Header />
           <Routes>
             <Route
               path="/algorithms"
-              element={<Algorithms />}
+              element={<Algorithms signOut={signOut} />}
             />
             <Route
               path="/miners"
-              element={<Miners />}
+              element={<Miners signOut={signOut} />}
             />
             <Route
               path="*"
-              element={<Algorithms />}
+              element={<Algorithms signOut={signOut} />}
             />
           </Routes>
         </Router>

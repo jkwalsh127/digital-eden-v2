@@ -1,5 +1,5 @@
 import React from 'react';
-import photo from './images/btc-bot-results.png';
+import photo from '../images/btc-bot-results.png';
 import Footer from './Footer';
 
 function Info() {
