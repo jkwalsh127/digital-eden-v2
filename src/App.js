@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import "@aws-amplify/ui-react/styles.css";
+import './indexMediaQueries.css';
 import Header from './components/Header';
 import Algorithms from './pages/Algorithms';
 import Miners from './pages/Miners';
