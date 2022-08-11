@@ -223,9 +223,6 @@ body {
 }
 /* Info container is positioned below the hero component and provides a dark background for the content to sit on top of */
 .info-container {
-  /* background-color: var(--console-dark);
-  width: 100%;
-  z-index: 900; */
   min-width: 100vw;
   min-height: 100vh;
   display: grid;
@@ -360,14 +357,90 @@ body {
 /* / */
 /* / */
 /* / */
-@media screen and (max-width: 1500px) {
-  .landing-container {
-    /* grid-template-columns: 1fr 230px 800px 230px 1fr; */
+@media screen and (max-width: 1400px) {
+  .info-container {
+    grid-template-columns: 1fr 120px 900px 120px 1fr;
+  }
+  .info-wrapper {
+    max-width: 900px;
   }
 }
-@media screen and (max-width: 1255px) {
-  .landing-container {
-    /* grid-template-columns: 1fr 230px 700px 230px 1fr; */
+@media screen and (max-width: 1155px) {
+  .info-container {
+    grid-template-columns: 1fr 100px 800px 100px 1fr;
+  }
+  .info-left-container {
+    width: 100px;
+  }
+  .info-right-container {
+    width: 100px;
+  }
+  .info-wrapper {
+    max-width: 800px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .info-container {
+    grid-template-columns: 1fr 80px 700px 80px 1fr;
+  }
+  .info-left-container {
+    width: 80px;
+  }
+  .info-right-container {
+    width: 80px;
+  }
+  .info-wrapper {
+    max-width: 700px;
+  }
+}
+@media screen and (max-width: 860px) {
+  .info-container {
+    grid-template-columns: 1fr 60px 650px 60px 1fr;
+  }
+  .info-left-container {
+    width: 60px;
+  }
+  .info-right-container {
+    width: 60px;
+  }
+  .info-wrapper {
+    max-width: 650px;
+  }
+}
+@media screen and (max-width: 770px) {
+  .info-container {
+    grid-template-columns: 1fr 60px 600px 60px 1fr;
+  }
+  .info-wrapper {
+    max-width: 600px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .info-container {
+    grid-template-columns: 1fr 50px 550px 50px 1fr;
+  }
+  .info-left-container {
+    width: 50px;
+  }
+  .info-right-container {
+    width: 50px;
+  }
+  .info-wrapper {
+    max-width: 550px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .info-container {
+    grid-template-columns: 1fr 0px 650px 0px 1fr;
+  }
+  .info-left-container {
+    width: 0px;
+  }
+  .info-right-container {
+    width: 00px;
+  }
+  .info-wrapper {
+    max-width: 650px;
   }
 }
 @media screen and (min-width: 1500px) {
