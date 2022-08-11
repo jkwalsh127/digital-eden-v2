@@ -1,8 +1,4 @@
-# This "input" configures a global authorization rule to enable public access to
-# all models in this schema. Learn more about authorization rules here: https://docs.amplify.aws/cli/graphql/authorization-rules
-input AMPLIFY { globalAuthRule: AuthRule = { allow: public } } # FOR TESTING ONLY!
-
-type BtcTrade @model {
+type BtcTrade @model @auth(rules: [{allow: public}]) {
   id: ID!
   position: String!
   dateEntry: String
@@ -12,7 +8,8 @@ type BtcTrade @model {
   profitPrice: String
   profitPercentage: String
 }
-type BtcSummary @model {
+
+type BtcSummary @model @auth(rules: [{allow: public}]) {
   id: ID!
   netProfit: String
   grossProfit: String
@@ -40,7 +37,7 @@ type BtcSummary @model {
   avgTimeLoss: String
 }
 
-type EthTrade @model {
+type EthTrade @model @auth(rules: [{allow: public}]) {
   id: ID!
   position: String!
   dateEntry: String
@@ -50,7 +47,8 @@ type EthTrade @model {
   profitPrice: String
   profitPercentage: String
 }
-type EthSummary @model {
+
+type EthSummary @model @auth(rules: [{allow: public}]) {
   id: ID!
   netProfit: String
   grossProfit: String
@@ -77,3 +75,4 @@ type EthSummary @model {
   avgTimeWin: String
   avgTimeLoss: String
 }
+ 

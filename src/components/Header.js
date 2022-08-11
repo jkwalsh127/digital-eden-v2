@@ -13,11 +13,11 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`header ${ small ? "small" : ""}`}>
+    <header className={`header ${ small ? "small" : ""}`} >
 
       <div className="title-wrapper">
         <h1 className="bot-title-show font-subheader" to="/btc-bot/">
-          the <span className="highlight-title font-header">WORKHORSE</span>
+          <span className="highlight-title font-header">BTC</span> bot
         </h1>
       </div>
 
