@@ -17,11 +17,11 @@ const theme = createTheme({
     }
   },
   components: {
-    MuiIcon: {
+    MuiTypography: {
       styleOverrides: {
-        legendIcon: {
-          fontSize: "large",
-          paddingBottom: "10px"
+        legend: {
+          marginTop: "5px",
+          color: "#78797f"
         }
       }
     }

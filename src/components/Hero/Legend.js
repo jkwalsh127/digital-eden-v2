@@ -8,15 +8,15 @@ export default function Legend() {
       <>
         <Box className='legend-list' >
             <Box className='legend-item'>
-                <ArrowDropUp fontSize='large' color="legendRed"/>
-                <Typography sx={{mt: "5px"}} >
-                    = Close Short & Open Long
+                <ArrowDropDown fontSize='large' color="legendRed"/>
+                <Typography variant="legend">
+                    = Close Long & Open Short
                 </Typography>
             </Box>
             <Box className='legend-item'>
-                <ArrowDropDown fontSize='large' color="legendBlue"/>
-                <Typography sx={{mt: "5px"}} >
-                    = Close Long & Open Short
+                <ArrowDropUp fontSize='large' color="legendBlue"/>
+                <Typography variant="legend">
+                    = Close Short & Open Long
                 </Typography>
             </Box>
         </Box>
