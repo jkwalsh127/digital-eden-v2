@@ -1,78 +1,84 @@
 type BtcTrade @model @auth(rules: [{allow: public}]) {
   id: ID!
   position: String!
-  dateEntry: String
-  dateClose: String
-  priceEntry: String
-  priceClose: String
-  profitPrice: String
-  profitPercentage: String
+  dateEntry: AWSDate
+  dateClose: AWSDate
+  priceEntry: Int
+  priceClose: Int
+  profitPrice: Int
+  profitPercentage: Float
 }
 
 type BtcSummary @model @auth(rules: [{allow: public}]) {
   id: ID!
-  netProfit: String
-  grossProfit: String
-  grossLoss: String
-  netLong: String
-  grossLong: String
-  lossLong: String
-  netShort: String
-  grossShort: String
-  lossShort: String
-  buyAndHold: String
-  totalTrades: String
-  winningTrades: String
-  losingTrades: String
-  avgTrade: String
-  avgWin: String
-  avgLoss: String
-  winLossRatio: String
-  largestWin: String
-  largestWinDate: String
-  largestLoss: String
-  largestLossDate: String
-  avgTime: String
-  avgTimeWin: String
-  avgTimeLoss: String
+  netProfit: Float
+  grossProfitPercent: Float
+  grossProfitValue: Int
+  grossLoss: Float
+  netLong: Float
+  grossLong: Float
+  lossLong: Float
+  netShort: Float
+  grossShort: Float
+  lossShort: Float
+  buyAndHold: Float
+  totalTrades: Int
+  winningTrades: Int
+  losingTrades: Int
+  avgTrade: Float
+  avgWin: Float
+  avgLoss: Float
+  winLossRatio: Float
+  largestWinValue: Int
+  largestWinPercent: Float
+  largestWinDate: AWSDate
+  largestLossValue: Int
+  largestLossPercent: Float
+  largestLossDate: AWSDate
+  avgTime: Int
+  avgTimeLoss: Int
+  avgTimeWin: Int
 }
 
 type EthTrade @model @auth(rules: [{allow: public}]) {
   id: ID!
   position: String!
-  dateEntry: String
-  dateClose: String
-  priceEntry: String
-  priceClose: String
-  profitPrice: String
-  profitPercentage: String
+  dateEntry: AWSDate
+  dateClose: AWSDate
+  priceEntry: Int
+  priceClose: Int
+  profitPrice: Int
+  profitPercentage: Float
 }
 
 type EthSummary @model @auth(rules: [{allow: public}]) {
   id: ID!
-  netProfit: String
-  grossProfit: String
-  grossLoss: String
-  netLong: String
-  grossLong: String
-  lossLong: String
-  netShort: String
-  grossShort: String
-  lossShort: String
-  buyAndHold: String
-  totalTrades: String
-  winningTrades: String
-  losingTrades: String
-  avgTrade: String
-  avgWin: String
-  avgLoss: String
-  winLossRatio: String
-  largestWin: String
-  largestWinDate: String
-  largestLoss: String
-  largestLossDate: String
-  avgTime: String
-  avgTimeWin: String
-  avgTimeLoss: String
+  netProfit: Float
+  grossProfitPercent: Float
+  grossProfitValue: Int
+  grossLoss: Float
+  netLong: Float
+  grossLong: Float
+  lossLong: Float
+  netShort: Float
+  grossShort: Float
+  lossShort: Float
+  buyAndHold: Float
+  totalTrades: Int
+  winningTrades: Int
+  losingTrades: Int
+  avgTrade: Float
+  avgWin: Float
+  avgLoss: Float
+  winLossRatio: Float
+  largestWinValue: Int
+  largestWinPercent: Float
+  largestWinDate: AWSDate
+  largestLossValue: Int
+  largestLossPercent: Float
+  largestLossDate: AWSDate
+  avgTime: Int
+  avgTimeWin: Int
+  avgTimeLoss: Int
 }
  

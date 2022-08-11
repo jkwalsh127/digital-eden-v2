@@ -1,11 +1,24 @@
 import { ArrowCircleDown, ArrowCircleUp } from '@mui/icons-material';
 import { Avatar, ListItem, ListItemAvatar, Typography } from '@mui/material';
-import React from 'react';
+import { API } from 'aws-amplify';
+import React, { useEffect, useState  } from 'react';
+import { listBtcTrades } from '../graphql/queries';
 import photo from '../images/btc-bot-results.png';
 import imageLeft from '../images/left.png';
 import imageRight from '../images/right.png';
 
-function Info({trades}) {
+function Info() {
+  const [btcTrades, setBtcTrades] = useState([]);
+
+  useEffect(() => {
+    fetchBtcTrades();
+  }, []);
+
+  async function fetchBtcTrades() {
+    const apiData = await API.graphql({ query: listBtcTrades });
+    setBtcTrades(apiData.data.listBtcTrades.items);
+  }
+
   return (
     <div className="info-container">
 
@@ -17,7 +30,7 @@ function Info({trades}) {
           <img className="backtest-results" src={photo} alt="backtest results" /> 
         </div>
         {
-          trades.map(trade => (
+          btcTrades.map(trade => (
             <ListItem>
               <ListItemAvatar>
                 <Avatar>
