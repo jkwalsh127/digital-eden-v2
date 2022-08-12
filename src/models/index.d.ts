@@ -37,9 +37,9 @@ export declare class BtcTrade {
 
 export declare class BtcSummary {
   readonly id: string;
-  readonly netProfit?: number | null;
-  readonly grossProfitPercent?: number | null;
-  readonly grossProfitValue?: number | null;
+  readonly netProfitValue?: number | null;
+  readonly netProfitPercent?: number | null;
+  readonly grossProfit?: number | null;
   readonly grossLoss?: number | null;
   readonly netLong?: number | null;
   readonly grossLong?: number | null;
@@ -87,9 +87,9 @@ export declare class EthTrade {
 
 export declare class EthSummary {
   readonly id: string;
-  readonly netProfit?: number | null;
-  readonly grossProfitPercent?: number | null;
-  readonly grossProfitValue?: number | null;
+  readonly netProfitValue?: number | null;
+  readonly net?: number | null;
+  readonly grossProfit?: number | null;
   readonly grossLoss?: number | null;
   readonly netLong?: number | null;
   readonly grossLong?: number | null;

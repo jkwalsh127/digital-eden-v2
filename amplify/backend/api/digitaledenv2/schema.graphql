@@ -11,9 +11,9 @@ type BtcTrade @model @auth(rules: [{allow: public}]) {
 
 type BtcSummary @model @auth(rules: [{allow: public}]) {
   id: ID!
-  netProfit: Float
-  grossProfitPercent: Float
-  grossProfitValue: Int
+  netProfitValue: Int
+  netProfitPercent: Float
+  grossProfit: Float
   grossLoss: Float
   netLong: Float
   grossLong: Float
@@ -53,9 +53,9 @@ type EthTrade @model @auth(rules: [{allow: public}]) {
 
 type EthSummary @model @auth(rules: [{allow: public}]) {
   id: ID!
-  netProfit: Float
-  grossProfitPercent: Float
-  grossProfitValue: Int
+  netProfitValue: Int
+  net: Float
+  grossProfit: Float
   grossLoss: Float
   netLong: Float
   grossLong: Float

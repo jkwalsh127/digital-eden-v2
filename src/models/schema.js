@@ -111,24 +111,24 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
-                "netProfit": {
-                    "name": "netProfit",
-                    "isArray": false,
-                    "type": "Float",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "grossProfitPercent": {
-                    "name": "grossProfitPercent",
-                    "isArray": false,
-                    "type": "Float",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "grossProfitValue": {
-                    "name": "grossProfitValue",
+                "netProfitValue": {
+                    "name": "netProfitValue",
                     "isArray": false,
                     "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "netProfitPercent": {
+                    "name": "netProfitPercent",
+                    "isArray": false,
+                    "type": "Float",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "grossProfit": {
+                    "name": "grossProfit",
+                    "isArray": false,
+                    "type": "Float",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -453,24 +453,24 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
-                "netProfit": {
-                    "name": "netProfit",
-                    "isArray": false,
-                    "type": "Float",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "grossProfitPercent": {
-                    "name": "grossProfitPercent",
-                    "isArray": false,
-                    "type": "Float",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "grossProfitValue": {
-                    "name": "grossProfitValue",
+                "netProfitValue": {
+                    "name": "netProfitValue",
                     "isArray": false,
                     "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "net": {
+                    "name": "net",
+                    "isArray": false,
+                    "type": "Float",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "grossProfit": {
+                    "name": "grossProfit",
+                    "isArray": false,
+                    "type": "Float",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -687,5 +687,5 @@ export const schema = {
     },
     "enums": {},
     "nonModels": {},
-    "version": "04a3dfa81e98e01f65283c728e6010df"
+    "version": "efe9a588d33eb8d4393d0e9fe5dd5c31"
 };
