@@ -9,6 +9,9 @@ Amplify.configure(config);
 
 const theme = createTheme({
   palette: {
+    primary: {
+      main: "#040e00",
+    },
     legendRed: {
       main: "#ff5252"
     },
@@ -24,7 +27,7 @@ const theme = createTheme({
           color: "#78797f"
         }
       }
-    }
+    },
   }
 });
 

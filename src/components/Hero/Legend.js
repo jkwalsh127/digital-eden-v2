@@ -5,7 +5,8 @@ export default function Legend() {
 
     return (
   
-      <>
+      <div className="legend-grid">
+        <div style={{ borderBottom: "1px solid #26c1d1" }}></div>
         <Box className='legend-list' >
             <Box className='legend-item'>
                 <ArrowDropDown fontSize='large' color="legendRed"/>
@@ -20,7 +21,8 @@ export default function Legend() {
                 </Typography>
             </Box>
         </Box>
-      </>
+        <div style={{ borderBottom: "1px solid #26c1d1" }}></div>
+      </div>
   
       );
   };

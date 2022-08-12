@@ -63,32 +63,31 @@ body {
 /* / */
 /* Upon page load, or whenever page is scrolled to the top, the header has no background color, taking on the black of the page background */
 .header {
-  width: 100%;
+  width: 100vw;
   height: 80px;
-  display: flex;
-  align-items: center;
   position: fixed;
   top: 0;
   z-index: 999;
   transition: .9s;
-  padding-top: 70px;
+  padding-top: 50px;
 }
 /* Upon scrolling from top of page, header shrinks slightly and takes on a horizontal background gradient that matches the colors of the info component */
 .small {
   height: 60px;
-  background: #061000b3;
-  padding-top: 0px;
+  background: #061000cc;
   border-bottom: 1px #2f7a86 solid;
+  padding-top: 0;
 }
-.title-wrapper {
+.header-grid {
   width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
+  height: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1000px 1fr;
+}
+.nav-wrapper {
+  width: 100%;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  height: 100%;
-  padding-left: 200px;
+  justify-content: space-between;
 }
 .welcome-show {
   font-size: 22px;
@@ -98,14 +97,21 @@ body {
 .welcome-hide {
   display: none;
 }
+.show-nav {
+  display: flex;
+}
+.hide-nav {
+  display: none;
+}
 .bot-title-show {
   font-size: 28px;
   color: var(--white);
   margin: 0;
+
 }
 .highlight-title {
   font-size: 50px;
-  color: var(--mint);
+  color: #31DA00;
 }
 
 /* / */
@@ -206,7 +212,7 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background: #040e00;
+  background: var(--console-light);
 }
 /* Hero wrapper provides a dark, opaque gradient to lay over the background video */
 .hero-wrapper-show {
@@ -252,7 +258,7 @@ body {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  background-color: #061000;
+  background-color: var(--console-dark);
   padding-bottom: 100px;
 }
 /* Backtest info wrpper provides a section to describe what is being shown in the backtest image below it */
@@ -304,10 +310,9 @@ body {
   height: 100vh;
   max-width: 100vw;
 }
-.legend-container {
-  height: 50px;
-  width: 100%;
-  z-index: 1;
+.legend-grid {
+  display: grid;
+  grid-template-columns: 1fr 1000px 1fr;
 }
 .legend-list {
   display: flex;
@@ -361,6 +366,12 @@ body {
   .info-container {
     grid-template-columns: 1fr 120px 900px 120px 1fr;
   }
+  .header-grid {
+    grid-template-columns: 1fr 900px 1fr;
+  }
+  .legend-grid {
+    grid-template-columns: 1fr 900px 1fr;
+  }
   .info-wrapper {
     max-width: 900px;
   }
@@ -368,6 +379,12 @@ body {
 @media screen and (max-width: 1155px) {
   .info-container {
     grid-template-columns: 1fr 100px 800px 100px 1fr;
+  }
+  .header-grid {
+    grid-template-columns: 1fr 800px 1fr;
+  }
+  .legend-grid {
+    grid-template-columns: 1fr 800px 1fr;
   }
   .info-left-container {
     width: 100px;
@@ -383,6 +400,12 @@ body {
   .info-container {
     grid-template-columns: 1fr 80px 700px 80px 1fr;
   }
+  .header-grid {
+    grid-template-columns: 1fr 700px 1fr;
+  }
+  .legend-grid {
+    grid-template-columns: 1fr 700px 1fr;
+  }
   .info-left-container {
     width: 80px;
   }
@@ -396,6 +419,12 @@ body {
 @media screen and (max-width: 860px) {
   .info-container {
     grid-template-columns: 1fr 60px 650px 60px 1fr;
+  }
+  .header-grid {
+    grid-template-columns: 1fr 650px 1fr;
+  }
+  .legend-grid {
+    grid-template-columns: 1fr 650px 1fr;
   }
   .info-left-container {
     width: 60px;
@@ -411,6 +440,12 @@ body {
   .info-container {
     grid-template-columns: 1fr 60px 600px 60px 1fr;
   }
+  .header-grid {
+    grid-template-columns: 1fr 600px 1fr;
+  }
+  .legend-grid {
+    grid-template-columns: 1fr 600px 1fr;
+  }
   .info-wrapper {
     max-width: 600px;
   }
@@ -418,6 +453,12 @@ body {
 @media screen and (max-width: 720px) {
   .info-container {
     grid-template-columns: 1fr 50px 550px 50px 1fr;
+  }
+  .header-grid {
+    grid-template-columns: 1fr 550px 1fr;
+  }
+  .legend-grid {
+    grid-template-columns: 1fr 550px 1fr;
   }
   .info-left-container {
     width: 50px;
@@ -433,6 +474,12 @@ body {
   .info-container {
     grid-template-columns: 1fr 0px 650px 0px 1fr;
   }
+  .header-grid {
+    grid-template-columns: 1fr 650px 1fr;
+  }
+  .legend-grid {
+    grid-template-columns: 1fr 650px 1fr;
+  }
   .info-left-container {
     width: 0px;
   }
@@ -444,17 +491,11 @@ body {
   }
 }
 @media screen and (min-width: 1500px) {
-  .title-wrapper {
-      padding-left: 5%;
-  }
   .subheader-wrapper {
       padding-left: 10%;
   }
 }
 @media screen and (min-width: 1600px) {
-  .title-wrapper {
-      padding-left: 0;
-  }
   .subheader-wrapper {
       padding-left: 50px;
   }
@@ -630,9 +671,6 @@ body {
   }
 }
 @media screen and (min-height: 750px) and (max-width: 950px) {
-  .header {
-      padding-top: 0px;
-  }
   .welcome-subheader {
       margin-top: 60px;
       margin-left: 0;
@@ -668,9 +706,6 @@ body {
   }
 }
 @media screen and (min-height: 450px) and (max-width: 800px) {
-  .header {
-      padding-top: 0px;
-  }
   .hero-container {
       min-height: 80vh;
   }
@@ -693,9 +728,6 @@ body {
   }
   .video-show {
       height: 50vh;
-  }
-  .small {
-      padding-top: 0px;
   }
   .welcome-subheader {
       margin-top: 60px;
@@ -743,12 +775,6 @@ body {
 /* / */
 /* / */
 @media screen and (max-height: 650px) and (min-width: 800px) {
-  .header {
-      padding-top: 40px;
-  }
-  .small {
-      padding-top: 0;
-  }
   .title-wrapper {
       padding-left: 50px;
   }
@@ -769,9 +795,6 @@ body {
 /* / */
 /* / */
 @media screen and (max-height: 450px) {
-  .header {
-      padding-top: 20px;
-  }
   .welcome-subheader {
       margin-top: 90px;
       margin-left: 60px;
@@ -786,9 +809,6 @@ body {
   }
 }
 @media screen and (max-height: 250px) and (min-width: 1200px) {
-  .header {
-      padding-top: 0;
-  }
   .title-wrapper {
       padding-left: 150px;
   }
