@@ -17,36 +17,36 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
-                "dateEntry": {
-                    "name": "dateEntry",
+                "entryDate": {
+                    "name": "entryDate",
                     "isArray": false,
                     "type": "AWSDate",
                     "isRequired": false,
                     "attributes": []
                 },
-                "dateClose": {
-                    "name": "dateClose",
+                "closeDate": {
+                    "name": "closeDate",
                     "isArray": false,
                     "type": "AWSDate",
                     "isRequired": false,
                     "attributes": []
                 },
-                "priceEntry": {
-                    "name": "priceEntry",
+                "entryPrice": {
+                    "name": "entryPrice",
                     "isArray": false,
                     "type": "Int",
                     "isRequired": false,
                     "attributes": []
                 },
-                "priceClose": {
-                    "name": "priceClose",
+                "closePrice": {
+                    "name": "closePrice",
                     "isArray": false,
                     "type": "Int",
                     "isRequired": false,
                     "attributes": []
                 },
-                "profitPrice": {
-                    "name": "profitPrice",
+                "profitValue": {
+                    "name": "profitValue",
                     "isArray": false,
                     "type": "Int",
                     "isRequired": false,
@@ -54,6 +54,34 @@ export const schema = {
                 },
                 "profitPercentage": {
                     "name": "profitPercentage",
+                    "isArray": false,
+                    "type": "Float",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "runUpValue": {
+                    "name": "runUpValue",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "runUpPercentage": {
+                    "name": "runUpPercentage",
+                    "isArray": false,
+                    "type": "Float",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "drawDownValue": {
+                    "name": "drawDownValue",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "drawDownPercentage": {
+                    "name": "drawDownPercentage",
                     "isArray": false,
                     "type": "Float",
                     "isRequired": false,
@@ -118,71 +146,71 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
-                "netProfitPercent": {
-                    "name": "netProfitPercent",
+                "netProfitPercentage": {
+                    "name": "netProfitPercentage",
                     "isArray": false,
                     "type": "Float",
                     "isRequired": false,
                     "attributes": []
                 },
-                "grossProfit": {
-                    "name": "grossProfit",
+                "grossProfitPercentage": {
+                    "name": "grossProfitPercentage",
                     "isArray": false,
                     "type": "Float",
                     "isRequired": false,
                     "attributes": []
                 },
-                "grossLoss": {
-                    "name": "grossLoss",
+                "grossLossPercentage": {
+                    "name": "grossLossPercentage",
                     "isArray": false,
                     "type": "Float",
                     "isRequired": false,
                     "attributes": []
                 },
-                "netLong": {
-                    "name": "netLong",
+                "netLongPercentage": {
+                    "name": "netLongPercentage",
                     "isArray": false,
                     "type": "Float",
                     "isRequired": false,
                     "attributes": []
                 },
-                "grossLong": {
-                    "name": "grossLong",
+                "grossLongPercentage": {
+                    "name": "grossLongPercentage",
                     "isArray": false,
                     "type": "Float",
                     "isRequired": false,
                     "attributes": []
                 },
-                "lossLong": {
-                    "name": "lossLong",
+                "lossLongPercentage": {
+                    "name": "lossLongPercentage",
                     "isArray": false,
                     "type": "Float",
                     "isRequired": false,
                     "attributes": []
                 },
-                "netShort": {
-                    "name": "netShort",
+                "netShortPercentage": {
+                    "name": "netShortPercentage",
                     "isArray": false,
                     "type": "Float",
                     "isRequired": false,
                     "attributes": []
                 },
-                "grossShort": {
-                    "name": "grossShort",
+                "grossShortPercentage": {
+                    "name": "grossShortPercentage",
                     "isArray": false,
                     "type": "Float",
                     "isRequired": false,
                     "attributes": []
                 },
-                "lossShort": {
-                    "name": "lossShort",
+                "lossShortPercentage": {
+                    "name": "lossShortPercentage",
                     "isArray": false,
                     "type": "Float",
                     "isRequired": false,
                     "attributes": []
                 },
-                "buyAndHold": {
-                    "name": "buyAndHold",
+                "buyAndHoldPercentage": {
+                    "name": "buyAndHoldPercentage",
                     "isArray": false,
                     "type": "Float",
                     "isRequired": false,
@@ -195,106 +223,253 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
-                "winningTrades": {
-                    "name": "winningTrades",
+                "totalTradesLong": {
+                    "name": "totalTradesLong",
                     "isArray": false,
                     "type": "Int",
                     "isRequired": false,
                     "attributes": []
                 },
-                "losingTrades": {
-                    "name": "losingTrades",
+                "totalTradesShort": {
+                    "name": "totalTradesShort",
                     "isArray": false,
                     "type": "Int",
                     "isRequired": false,
                     "attributes": []
                 },
-                "avgTrade": {
-                    "name": "avgTrade",
-                    "isArray": false,
-                    "type": "Float",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "avgWin": {
-                    "name": "avgWin",
-                    "isArray": false,
-                    "type": "Float",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "avgLoss": {
-                    "name": "avgLoss",
-                    "isArray": false,
-                    "type": "Float",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "winLossRatio": {
-                    "name": "winLossRatio",
-                    "isArray": false,
-                    "type": "Float",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "largestWinValue": {
-                    "name": "largestWinValue",
+                "totalWins": {
+                    "name": "totalWins",
                     "isArray": false,
                     "type": "Int",
                     "isRequired": false,
                     "attributes": []
                 },
-                "largestWinPercent": {
-                    "name": "largestWinPercent",
+                "totalWinsLong": {
+                    "name": "totalWinsLong",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "totalWinsShort": {
+                    "name": "totalWinsShort",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "totalLosses": {
+                    "name": "totalLosses",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "totalLossesLong": {
+                    "name": "totalLossesLong",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "totalLossesShort": {
+                    "name": "totalLossesShort",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "percentProfitable": {
+                    "name": "percentProfitable",
                     "isArray": false,
                     "type": "Float",
                     "isRequired": false,
                     "attributes": []
                 },
-                "largestWinDate": {
-                    "name": "largestWinDate",
-                    "isArray": false,
-                    "type": "AWSDate",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "largestLossValue": {
-                    "name": "largestLossValue",
-                    "isArray": false,
-                    "type": "Int",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "largestLossPercent": {
-                    "name": "largestLossPercent",
+                "percentProfitableLongs": {
+                    "name": "percentProfitableLongs",
                     "isArray": false,
                     "type": "Float",
                     "isRequired": false,
                     "attributes": []
                 },
-                "largestLossDate": {
-                    "name": "largestLossDate",
+                "percentProfitableShorts": {
+                    "name": "percentProfitableShorts",
                     "isArray": false,
-                    "type": "AWSDate",
+                    "type": "Float",
                     "isRequired": false,
                     "attributes": []
                 },
-                "avgTime": {
-                    "name": "avgTime",
+                "avgTradePercentage": {
+                    "name": "avgTradePercentage",
+                    "isArray": false,
+                    "type": "Float",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "avgTradePercentageLong": {
+                    "name": "avgTradePercentageLong",
+                    "isArray": false,
+                    "type": "Float",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "avgTradePercentageShort": {
+                    "name": "avgTradePercentageShort",
+                    "isArray": false,
+                    "type": "Float",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "avgWinPercentage": {
+                    "name": "avgWinPercentage",
+                    "isArray": false,
+                    "type": "Float",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "avgWinPercentageLong": {
+                    "name": "avgWinPercentageLong",
+                    "isArray": false,
+                    "type": "Float",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "avgWinPercentageShort": {
+                    "name": "avgWinPercentageShort",
+                    "isArray": false,
+                    "type": "Float",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "averageLossPercentage": {
+                    "name": "averageLossPercentage",
+                    "isArray": false,
+                    "type": "Float",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "averageLossPercentageLong": {
+                    "name": "averageLossPercentageLong",
+                    "isArray": false,
+                    "type": "Float",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "averageLossPercentageShort": {
+                    "name": "averageLossPercentageShort",
+                    "isArray": false,
+                    "type": "Float",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "winRatio": {
+                    "name": "winRatio",
+                    "isArray": false,
+                    "type": "Float",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "winRatioLong": {
+                    "name": "winRatioLong",
+                    "isArray": false,
+                    "type": "Float",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "winRatioShort": {
+                    "name": "winRatioShort",
+                    "isArray": false,
+                    "type": "Float",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "largestWinValueLong": {
+                    "name": "largestWinValueLong",
                     "isArray": false,
                     "type": "Int",
                     "isRequired": false,
                     "attributes": []
                 },
-                "avgTimeLoss": {
-                    "name": "avgTimeLoss",
+                "largestWinPercentageLong": {
+                    "name": "largestWinPercentageLong",
+                    "isArray": false,
+                    "type": "Float",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "largestLossValueShort": {
+                    "name": "largestLossValueShort",
                     "isArray": false,
                     "type": "Int",
                     "isRequired": false,
                     "attributes": []
                 },
-                "avgTimeWin": {
-                    "name": "avgTimeWin",
+                "largestWinPercentageShort": {
+                    "name": "largestWinPercentageShort",
+                    "isArray": false,
+                    "type": "Float",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "avgBarsInTrade": {
+                    "name": "avgBarsInTrade",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "avgBarsInTradeLong": {
+                    "name": "avgBarsInTradeLong",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "avgBarsInTradeShort": {
+                    "name": "avgBarsInTradeShort",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "avgBarsInWin": {
+                    "name": "avgBarsInWin",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "avgBarsInWinLong": {
+                    "name": "avgBarsInWinLong",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "avgBarsInWinShort": {
+                    "name": "avgBarsInWinShort",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "avgBarsInLoss": {
+                    "name": "avgBarsInLoss",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "avgBarsInLossLong": {
+                    "name": "avgBarsInLossLong",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "avgBarsInLossShort": {
+                    "name": "avgBarsInLossShort",
                     "isArray": false,
                     "type": "Int",
                     "isRequired": false,
@@ -341,351 +516,9 @@ export const schema = {
                     }
                 }
             ]
-        },
-        "EthTrade": {
-            "name": "EthTrade",
-            "fields": {
-                "id": {
-                    "name": "id",
-                    "isArray": false,
-                    "type": "ID",
-                    "isRequired": true,
-                    "attributes": []
-                },
-                "position": {
-                    "name": "position",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": true,
-                    "attributes": []
-                },
-                "dateEntry": {
-                    "name": "dateEntry",
-                    "isArray": false,
-                    "type": "AWSDate",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "dateClose": {
-                    "name": "dateClose",
-                    "isArray": false,
-                    "type": "AWSDate",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "priceEntry": {
-                    "name": "priceEntry",
-                    "isArray": false,
-                    "type": "Int",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "priceClose": {
-                    "name": "priceClose",
-                    "isArray": false,
-                    "type": "Int",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "profitPrice": {
-                    "name": "profitPrice",
-                    "isArray": false,
-                    "type": "Int",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "profitPercentage": {
-                    "name": "profitPercentage",
-                    "isArray": false,
-                    "type": "Float",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "createdAt": {
-                    "name": "createdAt",
-                    "isArray": false,
-                    "type": "AWSDateTime",
-                    "isRequired": false,
-                    "attributes": [],
-                    "isReadOnly": true
-                },
-                "updatedAt": {
-                    "name": "updatedAt",
-                    "isArray": false,
-                    "type": "AWSDateTime",
-                    "isRequired": false,
-                    "attributes": [],
-                    "isReadOnly": true
-                }
-            },
-            "syncable": true,
-            "pluralName": "EthTrades",
-            "attributes": [
-                {
-                    "type": "model",
-                    "properties": {}
-                },
-                {
-                    "type": "auth",
-                    "properties": {
-                        "rules": [
-                            {
-                                "allow": "public",
-                                "operations": [
-                                    "create",
-                                    "update",
-                                    "delete",
-                                    "read"
-                                ]
-                            }
-                        ]
-                    }
-                }
-            ]
-        },
-        "EthSummary": {
-            "name": "EthSummary",
-            "fields": {
-                "id": {
-                    "name": "id",
-                    "isArray": false,
-                    "type": "ID",
-                    "isRequired": true,
-                    "attributes": []
-                },
-                "netProfitValue": {
-                    "name": "netProfitValue",
-                    "isArray": false,
-                    "type": "Int",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "net": {
-                    "name": "net",
-                    "isArray": false,
-                    "type": "Float",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "grossProfit": {
-                    "name": "grossProfit",
-                    "isArray": false,
-                    "type": "Float",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "grossLoss": {
-                    "name": "grossLoss",
-                    "isArray": false,
-                    "type": "Float",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "netLong": {
-                    "name": "netLong",
-                    "isArray": false,
-                    "type": "Float",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "grossLong": {
-                    "name": "grossLong",
-                    "isArray": false,
-                    "type": "Float",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "lossLong": {
-                    "name": "lossLong",
-                    "isArray": false,
-                    "type": "Float",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "netShort": {
-                    "name": "netShort",
-                    "isArray": false,
-                    "type": "Float",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "grossShort": {
-                    "name": "grossShort",
-                    "isArray": false,
-                    "type": "Float",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "lossShort": {
-                    "name": "lossShort",
-                    "isArray": false,
-                    "type": "Float",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "buyAndHold": {
-                    "name": "buyAndHold",
-                    "isArray": false,
-                    "type": "Float",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "totalTrades": {
-                    "name": "totalTrades",
-                    "isArray": false,
-                    "type": "Int",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "winningTrades": {
-                    "name": "winningTrades",
-                    "isArray": false,
-                    "type": "Int",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "losingTrades": {
-                    "name": "losingTrades",
-                    "isArray": false,
-                    "type": "Int",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "avgTrade": {
-                    "name": "avgTrade",
-                    "isArray": false,
-                    "type": "Float",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "avgWin": {
-                    "name": "avgWin",
-                    "isArray": false,
-                    "type": "Float",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "avgLoss": {
-                    "name": "avgLoss",
-                    "isArray": false,
-                    "type": "Float",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "winLossRatio": {
-                    "name": "winLossRatio",
-                    "isArray": false,
-                    "type": "Float",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "largestWinValue": {
-                    "name": "largestWinValue",
-                    "isArray": false,
-                    "type": "Int",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "largestWinPercent": {
-                    "name": "largestWinPercent",
-                    "isArray": false,
-                    "type": "Float",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "largestWinDate": {
-                    "name": "largestWinDate",
-                    "isArray": false,
-                    "type": "AWSDate",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "largestLossValue": {
-                    "name": "largestLossValue",
-                    "isArray": false,
-                    "type": "Int",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "largestLossPercent": {
-                    "name": "largestLossPercent",
-                    "isArray": false,
-                    "type": "Float",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "largestLossDate": {
-                    "name": "largestLossDate",
-                    "isArray": false,
-                    "type": "AWSDate",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "avgTime": {
-                    "name": "avgTime",
-                    "isArray": false,
-                    "type": "Int",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "avgTimeWin": {
-                    "name": "avgTimeWin",
-                    "isArray": false,
-                    "type": "Int",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "avgTimeLoss": {
-                    "name": "avgTimeLoss",
-                    "isArray": false,
-                    "type": "Int",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "createdAt": {
-                    "name": "createdAt",
-                    "isArray": false,
-                    "type": "AWSDateTime",
-                    "isRequired": false,
-                    "attributes": [],
-                    "isReadOnly": true
-                },
-                "updatedAt": {
-                    "name": "updatedAt",
-                    "isArray": false,
-                    "type": "AWSDateTime",
-                    "isRequired": false,
-                    "attributes": [],
-                    "isReadOnly": true
-                }
-            },
-            "syncable": true,
-            "pluralName": "EthSummaries",
-            "attributes": [
-                {
-                    "type": "model",
-                    "properties": {}
-                },
-                {
-                    "type": "auth",
-                    "properties": {
-                        "rules": [
-                            {
-                                "allow": "public",
-                                "operations": [
-                                    "create",
-                                    "update",
-                                    "delete",
-                                    "read"
-                                ]
-                            }
-                        ]
-                    }
-                }
-            ]
         }
     },
     "enums": {},
     "nonModels": {},
-    "version": "efe9a588d33eb8d4393d0e9fe5dd5c31"
+    "version": "146c42848612365f8a28acbcd8e827ae"
 };

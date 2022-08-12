@@ -1,13 +1,12 @@
 import { ArrowCircleDown, ArrowCircleUp } from '@mui/icons-material';
 import { Avatar, ListItem, ListItemAvatar, Typography } from '@mui/material';
 import React, { useEffect, useState  } from 'react';
-import photo from '../images/btc-bot-results.png';
-import imageLeft from '../images/left.png';
-import imageRight from '../images/right.png';
+import photo from '../../images/btc-bot-results.png';
+import imageLeft from '../../images/left.png';
+import imageRight from '../../images/right.png';
 import { DataStore } from '@aws-amplify/datastore';
-import { BtcTrade, BtcSummary } from '../models';
-// import { API } from 'aws-amplify';
-// import { listBtcTrades } from '../graphql/queries';
+import { BtcTrade, BtcSummary } from '../../models';
+import EnhancedTable from './TradeTable';
 
 function Info() {
   const [arrayBtcTrades, setBtcTrades] = useState([]);
@@ -19,22 +18,15 @@ function Info() {
   }, []);
 
   async function fetchBtcTrades() {
-    const models = await DataStore.query(BtcTrade);
-    console.log(models);
-    setBtcTrades(models);
-    // console.log(arrayBtcTrades);
-    // const apiData = await API.graphql({ query: listBtcTrades });
-    // setBtcTrades(apiData.data.listBtcTrades.items);
-    // console.log(arrayBtcTrades);
+    const btcTradeModels = await DataStore.query(BtcTrade);
+    console.log(btcTradeModels);
+    setBtcTrades(btcTradeModels);
   }
+
   async function fetchBtcSummary() {
-    const models = await DataStore.query(BtcSummary);
-    console.log(models);
-    setBtcSummary(models);
-    // console.log(arrayBtcTrades);
-    // const apiData = await API.graphql({ query: listBtcTrades });
-    // setBtcTrades(apiData.data.listBtcTrades.items);
-    // console.log(arrayBtcTrades);
+    const summaryModels = await DataStore.query(BtcSummary);
+    console.log(summaryModels);
+    setBtcSummary(summaryModels);
   }
 
   return (
@@ -58,10 +50,11 @@ function Info() {
                 </Avatar>
               </ListItemAvatar>
               <Typography>
-                {trade.dateEntry} to {trade.dateClose}
+                {trade.dateEntry}{trade.dateClose}
               </Typography>
               <Typography>
-                {trade.PriceEntry} to {trade.PriceClose} total {trade.profitPrice} {trade.profitPercentage}
+                {trade.PriceEntry}{trade.PriceClose}{trade.profitPrice}{trade.profitPercentage}
+                {trade.runUpValue}{trade.runUpPercentage}{trade.drawDownValue}{trade.drawDownPercentage}
               </Typography>
             </ListItem>
           ))
@@ -81,6 +74,8 @@ function Info() {
             </ListItem>
           ))
         }
+
+        <EnhancedTable />
       </div>
 
       <div className='info-right-container' style={{backgroundImage: `url(${imageRight})`}}></div>

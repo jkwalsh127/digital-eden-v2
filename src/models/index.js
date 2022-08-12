@@ -4,11 +4,9 @@ import { schema } from './schema';
 
 
 
-const { BtcTrade, BtcSummary, EthTrade, EthSummary } = initSchema(schema);
+const { BtcTrade, BtcSummary } = initSchema(schema);
 
 export {
   BtcTrade,
-  BtcSummary,
-  EthTrade,
-  EthSummary
+  BtcSummary
 };
